@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produk & Layanan — Nylan Farma</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    :root{
+      --primary:#d9a441; --primary-dark:#b5872f; --bg:#f7f4ee; --text:#222;
+    }
+    body{font-family:"Poppins",sans-serif;background:#fff;color:var(--text);margin:0;padding:0;}
+    .container{max-width:1100px;margin:0 auto;padding:3rem 7%;}
+
+    /* HERO ATAS */
+    .menu-hero {
+      background: #fff;
+      padding: 6rem 7%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      border-bottom: 1px solid #eee;
+    }
+    .menu-hero h1 {
+      font-size: 2.3rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+    }
+    .menu-hero p {
+      max-width: 600px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Tabs */
+    .tabs {
+      display:flex;
+      gap:0.8rem;
+      flex-wrap:wrap;
+      margin:1.6rem 0 2rem;
+    }
+    .tab-btn {
+      padding:0.65rem 1.2rem;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      cursor:pointer;
+      font-weight:600;
+      color:var(--text);
+      text-decoration:none;
+      display:inline-flex;align-items:center;gap:0.5rem;
+      transition:all 180ms ease;
+    }
+    .tab-btn:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,0.06); }
+    .tab-btn.active{
+      background:var(--primary); color:#fff; border-color:var(--primary-dark);
+      box-shadow:0 14px 30px rgba(16,16,16,0.12);
+    }
+
+    /* Panel */
+    .tab-panel{ display:none; padding:1rem 0; background:#fff; border-radius:10px; }
+    .tab-panel.active{ display:block; }
+
+    /* Produk */
+    .product-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:1.2rem; margin-top:1rem;
+    }
+    .product-card{
+      background:#fff;border-radius:12px;padding:1rem;
+      border:1px solid #eee; box-shadow:0 8px 20px rgba(0,0,0,0.04);
+    }
+    .product-card h3{ margin:0 0 0.6rem; font-size:1rem; color:var(--primary-dark); }
+    .product-card p{ color:#555;font-size:0.9rem;margin:0;}
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP STRIP -->
+  <div class="top-strip"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="image/logo-img.png" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="menu.html" class="active">Produk & Layanan</a>
+      <a href="#career">Karier</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a><i data-feather="search"></i></a>
+      <a href="categories.html"><i data-feather="shopping-cart"></i></a>
+      <button id="hamburger-menu"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="menu-hero">
+    <h1>Produk & Layanan</h1>
+    <p>
+      Temukan berbagai produk farmasi yang telah melalui proses produksi berkualitas
+      sesuai standar kesehatan. Pilih kategori untuk melihat detail lengkap.
+    </p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- TAB BUTTONS -->
+    <div class="tabs" role="tablist">
+      <button class="tab-btn" data-target="panel-resep">Obat Resep Dokter</button>
+      <button class="tab-btn" data-target="panel-bebas">Obat Bebas & Terbatas</button>
+      <button class="tab-btn" data-target="panel-injeksi">Obat Injeksi</button>
+      <button class="tab-btn" data-target="panel-vitamin">Vitamin</button>
+      <button class="tab-btn" data-target="panel-topikal">Obat Topikal</button>
+    </div>
+
+    <!-- ================= OBAT RESEP ================= -->
+    <section id="panel-resep" class="tab-panel">
+      <h2>Obat Resep Dokter</h2>
+      <div class="product-grid">
+        <div class="product-card"><h3>Amoxynyl</h3><p>Rp35.000</p></div>
+        <div class="product-card"><h3>Cefadrox-N</h3><p>Rp32.000</p></div>
+        <div class="product-card"><h3>Cefinyx</h3><p>Rp37.000</p></div>
+        <div class="product-card"><h3>Amoxynyl Sirup Kering</h3><p>Rp15.000</p></div>
+        <div class="product-card"><h3>Cholamphenyl</h3><p>Rp22.000</p></div>
+        <div class="product-card"><h3>Ceterinyl</h3><p>Rp30.000</p></div>
+        <div class="product-card"><h3>Tensinyl</h3><p>Rp48.000</p></div>
+        <div class="product-card"><h3>Allopurinyl</h3><p>Rp40.000</p></div>
+      </div>
+    </section>
+
+    <!-- ================ OBAT BEBAS ================= -->
+    <section id="panel-bebas" class="tab-panel">
+      <h2>Obat Bebas & Terbatas</h2>
+      <div class="product-grid">
+        <div class="product-card"><h3>N-Cetamol</h3><p>Rp23.000</p></div>
+        <div class="product-card"><h3>Acetynal</h3><p>Rp23.000</p></div>
+        <div class="product-card"><h3>Maagrelief</h3><p>Rp21.000</p></div>
+        <div class="product-card"><h3>Travomyl</h3><p>Rp10.000</p></div>
+        <div class="product-card"><h3>N-Cetamol Sirup</h3><p>Rp14.000</p></div>
+        <div class="product-card"><h3>Mucoril</h3><p>Rp20.000</p></div>
+        <div class="product-card"><h3>Kidcough</h3><p>Rp21.000</p></div>
+        <div class="product-card"><h3>N-Cetamol Drops</h3><p>Rp20.000</p></div>
+        <div class="product-card"><h3>Folate</h3><p>Rp18.000</p></div>
+        <div class="product-card"><h3>Ferraplus</h3><p>Rp22.000</p></div>
+        <div class="product-card"><h3>Noralit</h3><p>Rp8.500</p></div>
+        <div class="product-card"><h3>Bisacolyn</h3><p>Rp12.000</p></div>
+        <div class="product-card"><h3>Losperistine</h3><p>Rp17.000</p></div>
+        <div class="product-card"><h3>Flunolax</h3><p>Rp10.000</p></div>
+      </div>
+    </section>
+
+    <!-- =================== INJEKSI =================== -->
+    <section id="panel-injeksi" class="tab-panel">
+      <h2>Obat Injeksi</h2>
+      <div class="product-grid">
+        <div class="product-card"><h3>Dextronyl 10</h3><p>Rp25.000</p></div>
+        <div class="product-card"><h3>Mannyl-20</h3><p>Rp27.000</p></div>
+        <div class="product-card"><h3>Ceftrylon</h3><p>Rp48.000</p></div>
+        <div class="product-card"><h3>Meropyon</h3><p>Rp98.000</p></div>
+        <div class="product-card"><h3>Raniject</h3><p>Rp48.000</p></div>
+        <div class="product-card"><h3>Diphenyl</h3><p>Rp89.000</p></div>
+        <div class="product-card"><h3>Ondanyl</h3><p>Rp87.000</p></div>
+      </div>
+    </section>
+
+    <!-- =================== VITAMIN =================== -->
+    <section id="panel-vitamin" class="tab-panel">
+      <h2>Vitamin</h2>
+      <div class="product-grid">
+        <div class="product-card"><h3>Dailyboost</h3><p>Rp30.000</p></div>
+        <div class="product-card"><h3>Vitamin E</h3><p>Rp20.000</p></div>
+        <div class="product-card"><h3>Multi B</h3><p>Rp22.000</p></div>
+        <div class="product-card"><h3>Fishgold</h3><p>Rp34.000</p></div>
+        <div class="product-card"><h3>Calciplus</h3><p>Rp26.000</p></div>
+        <div class="product-card"><h3>VitaC</h3><p>Rp21.000</p></div>
+        <div class="product-card"><h3>Vitajelly</h3><p>Rp25.000</p></div>
+      </div>
+    </section>
+
+    <!-- ================= TOPIKAL ================= -->
+    <section id="panel-topikal" class="tab-panel">
+      <h2>Obat Topikal</h2>
+      <div class="product-grid">
+        <div class="product-card"><h3>Oralfresh</h3><p>Rp18.000</p></div>
+        <div class="product-card"><h3>Cholamphenyl Ear Drops</h3><p>Rp10.500</p></div>
+        <div class="product-card"><h3>Thetrazyl</h3><p>Rp11.500</p></div>
+        <div class="product-card"><h3>Nylatisone</h3><p>Rp21.000</p></div>
+        <div class="product-card"><h3>Ketoconyl</h3><p>Rp23.000</p></div>
+        <div class="product-card"><h3>Myconal</h3><p>Rp24.000</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-gold">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="image/logo-img.png" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>Kawasan Industri Gandus, Blok C-12<br/>Palembang, Sumatera Selatan</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br/>production@nylanpharma.co.id</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin – Jumat: 08.00 – 17.00<br/>Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.target).classList.add('active');
+      });
+    });
+
+    // Default open tab
+    tabBtns[0].click();
+  </script>
+
+</body>
+</html>  

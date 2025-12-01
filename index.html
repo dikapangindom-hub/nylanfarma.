@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nylan Farma</title>
+
+  <!-- Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- TOP STRIP -->
+  <div class="top-strip" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="navbar-logo" aria-label="Nylan Farma home">
+      <img src="image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav" role="menubar">
+      <a role="menuitem" href="index.html">Home</a>
+
+      <div class="nav-item dropdown" role="none">
+        <a role="menuitem" href="about.html" class="has-dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+        <div class="dropdown-menu" role="menu" aria-label="Tentang Kami submenu">
+          <a role="menuitem" href="nilai-inti.html">Nilai Inti Perusahaan</a>
+          <a role="menuitem" href="kepengurusan.html">Kepengurusan</a>
+        </div>
+      </div>
+
+      <a role="menuitem" href="menu.html">Produk &amp; Layanan</a>
+      <a role="menuitem" href="#career">Karier</a>
+      <a role="menuitem" href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra" aria-hidden="false">
+      <a href="#" title="Cari" aria-label="Cari"><i data-feather="search"></i></a>
+
+      <a href="categories.html" target="_blank" rel="noopener noreferrer" title="Kategori Produk" aria-label="Kategori Produk">
+        <i data-feather="shopping-cart"></i>
+      </a>
+
+      <button id="hamburger-menu" aria-label="Buka menu" aria-expanded="false"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-main" id="home" role="region" aria-label="Hero">
+    <div class="hero-left">
+      <p class="hero-kicker">Nylan Farma</p>
+      <h1>Solusi Kesehatan Anda</h1>
+      <p class="hero-desc">
+        Memberikan layanan farmasi modern yang menggabungkan profesionalisme apoteker,
+        teknologi digital, dan kemudahan akses bagi masyarakat.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn-primary">Lihat Produk</a>
+        <a href="about.html" class="btn-ghost">Pelajari lebih lanjut</a>
+      </div>
+    </div>
+
+    <!-- ==================== HERO-RIGHT FIX SESUAI FIGMA ==================== -->
+    <div class="hero-right">
+
+        <div class="hero-produk-header">
+            <h3>Produk & Layanan</h3>
+            <p>Pilih kategori untuk melihat daftar produk secara lengkap.</p>
+        </div>
+
+        <div class="hero-cards">
+            <a href="menu.html#obat-bebas" class="hero-card">Obat Bebas</a>
+            <a href="menu.html#obat-bt" class="hero-card">Obat Bebas Terbatas</a>
+            <a href="menu.html#obat-keras" class="hero-card">Obat Keras</a>
+            <a href="menu.html#herbal" class="hero-card">Obat Herbal</a>
+            <a href="menu.html#suplemen" class="hero-card">Suplemen</a>
+            <a href="menu.html#lainnya" class="hero-card">Lainnya</a>
+        </div>
+
+        <div class="hero-produk-footer"></div>
+
+    </div>
+    <!-- ===================================================================== -->
+
+  </section>
+
+  <!-- SECTION KATEGORI PRODUK (tetap ada) -->
+  <section class="kategori-panel" aria-labelledby="kategori-title">
+    <div class="container-kategori">
+      <h2 id="kategori-title">Kategori Produk</h2>
+      <p class="kategori-desc">Temukan kebutuhan kesehatan Anda berdasarkan kategori.</p>
+
+      <nav class="kategori-list" role="navigation" aria-label="Kategori produk">
+        <a class="kategori-item" href="menu.html#resep" data-cat="resep">Obat Resep Dokter</a>
+        <a class="kategori-item" href="menu.html#bebas" data-cat="bebas">Obat Bebas &amp; Terbatas</a>
+        <a class="kategori-item" href="menu.html#injeksi" data-cat="injeksi">Obat Injeksi</a>
+        <a class="kategori-item" href="menu.html#vitamin" data-cat="vitamin">Vitamin</a>
+        <a class="kategori-item" href="menu.html#topikal" data-cat="topikal">Obat Topikal</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section class="career" id="career" role="region" aria-label="Career">
+    <div class="career-inner">
+      <p class="career-kicker">Career</p>
+      <h2>Looking for job?</h2>
+      <h3>Find Your Dream Job <br/>Work at NylanFarma</h3>
+      <p class="career-desc">
+        Kami selalu mencari individu dengan semangat tinggi di bidang farmasi, kesehatan,
+        dan teknologi. Bergabunglah dengan tim NylanFarma untuk ikut berkontribusi dalam
+        meningkatkan kualitas layanan kesehatan di Indonesia.
+      </p>
+      <a href="#contact" class="btn-primary">Lihat Peluang Kerja</a>
+    </div>
+
+    <div class="career-frame" aria-hidden="true">
+      <img src="image/job.jpg" alt="Karier Nylan Farma" class="career-img" />
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" role="region" aria-label="Kontak">
+    <h2><span>Kontak</span> Kami</h2>
+    <p class="contact-desc">Hubungi kami untuk informasi produk, kerja sama, atau peluang karier.</p>
+
+    <div class="row">
+      <form class="contact-form" action="#" method="post" role="form" aria-label="Form kontak">
+        <div class="input-group">
+          <i data-feather="user" aria-hidden="true"></i>
+          <input type="text" name="name" placeholder="Nama" required />
+        </div>
+        <div class="input-group">
+          <i data-feather="mail" aria-hidden="true"></i>
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="input-group">
+          <i data-feather="phone" aria-hidden="true"></i>
+          <input type="tel" name="phone" placeholder="No. HP" />
+        </div>
+        <button type="submit" class="btn-primary">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-gold" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="image/logo-img.png" alt="Logo" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>Kawasan Industri Gandus, Blok C-12<br/>Kota Palembang, Provinsi Sumatera Selatan</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br/>production@nylanpharma.co.id</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin – Jumat: 08.00 – 17.00<br/>Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+
+    const navbarNav = document.querySelector('.navbar-nav');
+    const burger = document.querySelector('#hamburger-menu');
+    burger.addEventListener('click', function (e) {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      navbarNav.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-item.dropdown').forEach(drop => {
+      const trigger = drop.querySelector('.has-dropdown');
+      const menu = drop.querySelector('.dropdown-menu');
+
+      drop.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) {
+          menu.style.display = 'block';
+        }
+      });
+      drop.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 768) {
+          menu.style.display = 'none';
+        }
+      });
+
+      trigger.addEventListener('click', (ev) => {
+        if (window.innerWidth <= 768) {
+          ev.preventDefault();
+          menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+      });
+    });
+
+    document.querySelectorAll('.kategori-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        const cat = item.dataset.cat || '';
+        try { localStorage.setItem('nylan_selected_category', cat); } catch(e){}
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item.dropdown')) {
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+      }
+    });
+  </script>
+
+</body>
+</html>

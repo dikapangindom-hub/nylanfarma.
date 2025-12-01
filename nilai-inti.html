@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nilai Inti Perusahaan — Nylan Farma</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Feather icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Ruang utama page */
+    .nilai-page {
+      padding: 6.5rem 7% 4rem;
+      background: #fff;
+      min-height: 80vh;
+    }
+
+    .nilai-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .nilai-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+    }
+
+    .nilai-intro {
+      color: #444;
+      margin-bottom: 1.6rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .nilai-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin: 1.4rem 0 2.4rem;
+    }
+
+    .nilai-item {
+      background: #fbfbfb;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      border: 1px solid #f1e9d0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+
+    .nilai-item h4 {
+      margin: 0 0 0.45rem;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+    }
+
+    .nilai-item p {
+      margin: 0;
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* gallery */
+    .nilai-gallery {
+      margin-top: 2.6rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .nilai-card {
+      text-align: center;
+    }
+
+    .nilai-card img {
+      width: 100%;
+      max-width: 320px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      display: block;
+      margin: 0 auto 0.9rem;
+    }
+
+    .nilai-card p {
+      margin: 0;
+      color: #444;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .nilai-title { font-size: 1.9rem; }
+      .nilai-card img { height: 180px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="image/logo-img.png" alt="Logo Nylan" class="logo-img">
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="menu.html">Produk & Layanan</a>
+      <a href="index.html#career">Karier</a>
+      <a href="index.html#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#"><i data-feather="search"></i></a>
+      <a href="#"><i data-feather="shopping-cart"></i></a>
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="nilai-page">
+    <div class="nilai-container">
+
+      <h1 class="nilai-title">Nilai Inti Perusahaan Nylan Pharma</h1>
+
+      <p class="nilai-intro">
+        Prinsip-prinsip inti yang menjadi landasan operasional, pengembangan produk, dan budaya kerja di Nylan Pharma.
+        Nilai-nilai ini menjadi pedoman kami dalam memberikan layanan kesehatan yang aman, bermutu, dan bertanggung jawab.
+      </p>
+
+      <div class="nilai-list">
+
+        <div class="nilai-item">
+          <h4>1. Integritas</h4>
+          <p>Nylan Pharma menjunjung tinggi kejujuran, transparansi, dan etika dalam setiap kegiatan operasional.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>2. Kualitas</h4>
+          <p>Kami berkomitmen menghasilkan produk yang aman, efektif, dan konsisten melalui standar CPOB.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>3. Inovasi</h4>
+          <p>Kami mendorong budaya penelitian dan pemanfaatan teknologi modern.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>4. Kolaborasi</h4>
+          <p>Kami membangun kerja sama strategis dengan akademisi, pemerintah, dan industri.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>5. Keberlanjutan</h4>
+          <p>Operasional perusahaan bertanggung jawab terhadap lingkungan dan generasi mendatang.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>6. Kepedulian</h4>
+          <p>Kesehatan masyarakat dan keselamatan pasien menjadi prioritas utama.</p>
+        </div>
+
+        <div class="nilai-item">
+          <h4>7. Profesionalisme</h4>
+          <p>Karyawan bekerja dengan etika dan kompetensi tinggi.</p>
+        </div>
+
+      </div>
+
+      <!-- GALERI GAMBAR — SUDAH FIX MENGGUNAKAN GAMBAR KAMU -->
+      <div class="nilai-gallery">
+
+        <div class="nilai-card">
+          <img src="image/gambargedung.png" alt="Gambar Gedung">
+          <p>Gambar Gedung</p>
+        </div>
+
+        <div class="nilai-card">
+          <img src="image/ruangproduksi.png" alt="Ruang Produksi">
+          <p>Ruang Produksi</p>
+        </div>
+
+        <div class="nilai-card">
+          <img src="image/gudangpenyimpananbahanbaku.png" alt="Gudang Bahan Baku">
+          <p>Gudang Penyimpanan Bahan Baku</p>
+        </div>
+
+        <div class="nilai-card">
+          <img src="image/laboratoriumqualitycontrol(qc).png" alt="Laboratorium QC">
+          <p>Laboratorium Quality Control (QC)</p>
+        </div>
+
+        <div style="grid-column: 1 / -1; display:flex; justify-content:center;">
+          <div style="max-width:520px; width:100%; text-align:center;">
+            <img src="image/areaproduksi.png" alt="Area Produksi" style="width:100%; border-radius:18px;">
+            <p style="margin-top:0.8rem; color:#444; font-weight:500;">Area Produksi</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer-gold">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="image/logo-img.png" alt="Logo Nylan" class="footer-logo">
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>feather.replace()</script>
+
+  <script>
+    const burger = document.querySelector('#hamburger-menu');
+    const nav = document.querySelector('.navbar-nav');
+    burger.addEventListener('click', e => {
+      e.preventDefault();
+      nav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

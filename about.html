@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami – Nylan Farma</title>
+
+  <!-- Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+  <!-- My Style (pakai css/style.css yang sama) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Strip emas di atas -->
+  <div class="top-strip"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <!-- Logo kiri -->
+    <a href="index.html" class="navbar-logo">
+      <img src="image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <!-- Menu tengah -->
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="menu.html">Produk &amp; Layanan</a>
+      <a href="index.html#career">Karier</a>
+      <a href="index.html#contact">Kontak</a>
+    </div>
+
+    <!-- Icon kanan -->
+    <div class="navbar-extra">
+      <a href="#"><i data-feather="search"></i></a>
+      <a href="#"><i data-feather="shopping-cart"></i></a>
+      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+    </div>
+  </nav>
+
+  <!-- HALAMAN TENTANG KAMI -->
+  <section class="about" id="about">
+    <h2><span>Tentang</span> Nylan Farma</h2>
+
+    <div class="row">
+      <div class="about-img">
+        <!-- pakai logo yang sama -->
+        <img src="image/logo-img.png" alt="Logo Nylan Farma" />
+      </div>
+
+      <div class="content">
+        <h3>Sekilas Tentang Kami</h3>
+        <p>
+          Nylan Farma adalah perusahaan farmasi yang berkomitmen menghadirkan produk dan layanan
+          kesehatan yang berkualitas, terpercaya, dan mudah diakses. Menggabungkan standar
+          farmasi yang baik dengan pendekatan teknologi digital.
+        </p>
+        <p>
+          Melalui pengembangan layanan online dan offline, kami ingin menjadi mitra kesehatan
+          yang dekat dengan masyarakat.
+        </p>
+
+        <h3 style="margin-top: 2rem;">Filosofi Logo Nylan Farma</h3>
+        <p>
+          Logo mencerminkan komitmen Nylan Farma pada inklusivitas, perlindungan kesehatan,
+          dan inovasi obat. Ornamen dan elemen visual menggambarkan keseimbangan antara
+          tradisi farmasi yang kuat dan penerapan teknologi modern.
+        </p>
+
+        <h3 style="margin-top: 2rem;">History</h3>
+        <p>
+          Nylan Farma didirikan di Palembang dengan visi untuk menjadi salah satu penyedia
+          layanan farmasi terdepan di Sumatera Selatan. Seiring perkembangan dunia kesehatan,
+          Nylan Farma terus beradaptasi dan menghadirkan solusi farmasi yang relevan,
+          mulai dari distribusi obat, pelayanan apotek, hingga pengembangan sistem digital
+          yang mempermudah pasien mendapatkan layanan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER EMAS (sama seperti index) -->
+  <footer class="footer-gold">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="image/logo-img.png" alt="Logo Nylan" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>
+            Kawasan Industri Gandus, Blok C-12<br />
+            Jalan Industri Raya, Kelurahan Gandus, Kecamatan Gandus<br />
+            Kota Palembang, Provinsi Sumatera Selatan, 30129, Indonesia
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br />hrd@nylanfarma.id</p>
+        </div>
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin – Jumat: 08.00 – 17.00<br />Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Aktifkan Feather Icons -->
+  <script>
+    feather.replace();
+
+    // hamburger menu (sama logic dengan index)
+    const navbarNav = document.querySelector('.navbar-nav');
+    const burger = document.querySelector('#hamburger-menu');
+
+    if (burger) {
+      burger.addEventListener('click', function (e) {
+        e.preventDefault();
+        navbarNav.classList.toggle('active');
+      });
+    }
+  </script>
+
+</body>
+</html>

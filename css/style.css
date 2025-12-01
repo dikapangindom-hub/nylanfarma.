@@ -1,0 +1,664 @@
+:root {
+  --primary: #d9a441;   /* emas utama */
+  --primary-dark: #b5872f;
+  --bg: #f7f4ee;        /* krem muda */
+  --text: #222222;
+  --muted: #666666;
+  --glass-border: rgba(213,174,75,0.12);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================= TOP STRIP ================= */
+.top-strip {
+  height: 6px;
+  background-color: var(--primary);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee4cf;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* navigation links */
+.navbar-nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.navbar-nav a {
+  font-size: 0.95rem;
+  color: var(--text);
+  position: relative;
+  padding: 0.45rem 0;
+}
+
+.navbar-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar-nav a:hover {
+  color: var(--primary-dark);
+}
+
+/* dropdown (simple) */
+.nav-item.dropdown { position: relative; }
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  padding: 0.5rem;
+  min-width: 200px;
+  z-index: 30;
+}
+.dropdown-menu a {
+  display:block;
+  padding:0.45rem 0.7rem;
+  color:#333;
+  font-size:0.95rem;
+}
+
+/* icon kanan */
+.navbar-extra a {
+  color: var(--text);
+  margin-left: 0.8rem;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.navbar-extra a:hover {
+  color: var(--primary-dark);
+}
+
+#hamburger-menu {
+  display: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+/* ================= HERO MAIN ================= */
+.hero-main {
+  padding: 3rem 7% 4rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  background-color: #fff;
+}
+
+/* kiri */
+.hero-left {
+  flex: 1.1;
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.hero-left h1 {
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* tombol hero */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-cta {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.btn-primary:hover,
+.btn-cta:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+  color: var(--primary-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background-color: #fff6de;
+}
+
+/* kanan: Produk & Layanan */
+.hero-right {
+  flex: 1;
+  background-color: #fdfaf5;
+  padding: 1.5rem 1.75rem;
+  border-radius: 1.2rem;
+  border: 1px solid #f1e1c5;
+}
+
+.hero-right h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-right p {
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.hero-card {
+  background-color: #ffffff;
+  border-radius: 0.9rem;
+  border: 1px solid #f1e1c5;
+  padding: 0.7rem 0.8rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ================= SECTION BASE ================= */
+section {
+  padding: 4rem 7%;
+}
+
+section h2 {
+  text-align: left;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 span {
+  color: var(--primary-dark);
+}
+
+/* ================= KATEGORI PRODUK (pills / kotak) ================= */
+/* Panel wrapper (opsional: tetapkan background lebih terang untuk area kategori) */
+.kategori-panel {
+  background: #fbf8f3;
+  padding: 2.6rem 7%;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border: 1px solid rgba(177,142,53,0.06);
+  margin-top: 1rem;
+}
+
+.kategori-panel .container-kategori {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kategori-panel h2 {
+  text-align: center;
+  font-size: 1.95rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kategori-desc {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+
+/* layout pills */
+.kategori-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.6rem;
+}
+
+/* each pill (link) */
+.kategori-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(18,18,18,0.04);
+  border: 1px solid var(--glass-border);
+  transition: all 200ms ease;
+  text-decoration: none;
+  min-width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* hover / focus state */
+.kategori-item:hover,
+.kategori-item:focus {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(16,16,16,0.12);
+  border-color: var(--primary-dark);
+}
+
+.kategori-item:active {
+  transform: translateY(-1px);
+}
+
+/* aksesibilitas focus */
+.kategori-item:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(213,174,75,0.18), 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background-color: #fdfaf5;
+}
+
+.about .row {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 1rem;
+}
+
+.about .content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+
+.about .content p {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ================= CAREER ================= */
+.career {
+  background-color: #ffffff;
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.career-inner {
+  flex: 1.1;
+}
+
+.career-kicker {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.career h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.career h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.career-desc {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  max-width: 30rem;
+  color: var(--muted);
+}
+
+/* container foto karier */
+.career-frame {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* gambar karier */
+.career-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.career-img:hover {
+  transform: scale(1.04);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background-color: #fdfaf5;
+}
+
+.contact-desc {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  flex: 1 1 320px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  border: 1px solid #e3d6ba;
+  background-color: #fff;
+}
+
+.input-group i {
+  flex-shrink: 0;
+}
+
+.input-group input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+/* ================= FOOTER GOLD ================= */
+.footer-gold {
+  background-color: var(--primary);
+  color: #fffdf5;
+  padding: 2.7rem 7% 1.7rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.footer-brand-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+
+.footer-col h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ================= MENU PAGE (menu.html) ================= */
+.menu-page {
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+  padding-left: 7%;
+  padding-right: 7%;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.menu-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-page-title {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.menu-page-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem 2rem;
+  justify-items: center;
+}
+
+.menu-grid .menu-card {
+  width: 100%;
+  max-width: 230px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  padding: 1.3rem;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-grid .menu-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.menu-grid .menu-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.menu-grid .menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= MEDIA QUERIES ================= */
+@media (max-width: 992px) {
+  .hero-main {
+    flex-direction: column;
+  }
+
+  .career {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ffffff;
+    width: 18rem;
+    height: 100vh;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+  }
+
+  .navbar-nav a::after {
+    display: none;
+  }
+
+  .navbar-nav.active {
+    right: 0;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .hero-main {
+    padding-top: 2.5rem;
+  }
+
+  /* hide hero-right cards stacking */
+  .hero-cards { grid-template-columns: repeat(2,1fr); gap:0.6rem; }
+  .kategori-list { justify-content: flex-start; padding-left: 0.6rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-cols {
+    flex-direction: column;
+  }
+
+  .kategori-item { min-width: 120px; padding: 0.55rem 0.9rem; }
+}
+
+/* small JS helpers */
+.kategori-item.is-active {
+  background: var(--primary-dark);
+  color: #fff;
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
