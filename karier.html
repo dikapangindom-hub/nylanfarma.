@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karier — Nylan Farma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    .cart-count { display: none; }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="./image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+      <div class="nav-item dropdown">
+        <a href="about.html" class="has-dropdown">Tentang Kami</a>
+        <div class="dropdown-menu">
+          <a href="nilai-inti.html">Nilai Inti Perusahaan</a>
+          <a href="kepengurusan.html">Kepengurusan</a>
+        </div>
+      </div>
+      <a href="menu.html">Produk &amp; Layanan</a>
+      <a href="karier.html" class="active-nav">Karier</a>
+      <a href="about.html#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#search" id="search-trigger"><i data-feather="search"></i></a>
+      <a href="menu.html#produk"><i data-feather="shopping-cart"></i><span class="cart-count" id="cart-count">0</span></a>
+      <button id="hamburger-menu"><i data-feather="menu"></i></button>
+    </div>
+  </nav>
+
+  <section class="hero-main career-hero">
+    <div class="hero-left">
+      <p class="hero-kicker">Karier</p>
+      <h1>Karier di Nylan Farma</h1>
+      <p class="hero-desc">Bergabung bersama tim kami — lihat posisi terbuka dan cara mengajukan lamaran.</p>
+      <a href="#positions" class="btn-primary">Lihat Lowongan</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-image-wrap">
+        <img src="./image/Karier/karier.png" alt="Karier Nylan" class="hero-image" />
+      </div>
+      <!-- 'Kenapa Bergabung' removed as requested -->
+    </div>
+  </section>
+
+  <section id="positions" class="menu-page">
+    <div class="menu-container">
+      <h2 class="menu-page-title">Lowongan Tersedia</h2>
+      <p class="menu-page-subtitle">Posisi yang sedang dibuka di Nylan Farma. Klik untuk melihat detail dan mengirim lamaran.</p>
+
+      <!-- styles moved to css/style.css -->
+
+      <div class="positions-center">
+        <div class="positions-card">
+          <h3>Posisi Pekerjaan</h3>
+          <div class="positions-section">
+            <h4>1. Posisi untuk SMA/SMK</h4>
+            <ul class="positions-list">
+              <li>Operator Produksi</li>
+              <li>Operator Pengemasan (Packaging)</li>
+              <li>Staf Gudang (Warehouse Staff)</li>
+              <li>Cleaning Service Produksi</li>
+              <li>Security (Satpam)</li>
+            </ul>
+
+            <h4>2. Posisi untuk S1</h4>
+            <ul class="positions-list">
+              <li>Staf Quality Assurance (QA)</li>
+              <li>Staf Quality Control (QC)</li>
+              <li>Staf Regulatory Affairs (RA)</li>
+              <li>Staf Riset &amp; Pengembangan (R&amp;D)</li>
+              <li>Staf HR &amp; General Affairs</li>
+              <li>Staf Keuangan &amp; Akuntansi</li>
+              <li>Staf Engineering</li>
+            </ul>
+
+            <h4>3. Posisi untuk S2 / Profesi Apoteker</h4>
+            <ul class="positions-list">
+              <li>Apoteker Penanggung Jawab (APJ)</li>
+              <li>Apoteker QA Supervisor</li>
+              <li>Apoteker QC Supervisor</li>
+              <li>Apoteker R&amp;D Formulator</li>
+              <li>Apoteker Produksi Supervisor</li>
+              <li>Apoteker Regulatory Affairs Specialist</li>
+            </ul>
+
+            <div style="margin-top:1rem;text-align:left">
+              <a href="mailto:hr@nylanfarma.id?subject=Lamaran%20Posisi" class="btn-primary">Kirim Lamaran / Kirim CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="career-grid">
+        <div class="positions-col">
+          <div class="positions-card">
+            <h3>Info Rekrutmen</h3>
+            <p style="color:#666; margin:0.4rem 0 0.8rem">Semua posisi tersedia tercantum di sisi kanan. Silakan lihat daftar posisi dan kirim CV jika Anda berminat.</p>
+            <a href="mailto:hr@nylanfarma.id?subject=Lamaran%20Posisi" class="btn-primary">Kirim Lamaran / Kirim CV</a>
+          </div>
+        </div>
+
+        <aside class="career-sidebar">
+
+          <!-- Kenapa Bergabung? image removed per request -->
+
+          <div class="sidebar-card">
+            <h4>Alur Recruitment</h4>
+            <ol style="margin:0 0 0.6rem 1.2rem;color:#333">
+              <li>Daftar & Kirim CV</li>
+              <li>Screening HR</li>
+              <li>Wawancara Teknis</li>
+              <li>Penawaran & Orientasi</li>
+            </ol>
+            <a href="karier.html#career-info" class="btn-ghost" style="display:inline-block">Pelajari Proses</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Quick Apply</h4>
+            <p style="color:#666;font-size:0.95rem">Kirim CV & surat lamaran lewat email. Cantumkan posisi di subject.</p>
+            <a href="mailto:hr@nylanfarma.id?subject=Lamaran%20Pekerjaan" class="btn-primary" style="display:block;text-align:center">Kirim Lamaran Sekarang</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>FAQ Singkat</h4>
+            <details><summary>Apa syarat pengalaman?</summary><p style="margin:0.5rem 0;color:#666">Tergantung posisi; beberapa untuk fresh graduate juga tersedia.</p></details>
+            <details><summary>Apakah ada program magang?</summary><p style="margin:0.5rem 0;color:#666">Kami membuka beberapa program magang setiap tahun.</p></details>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="career" id="career-info">
+    <div class="career-inner">
+      <h2>Bagaimana Cara Melamar</h2>
+      <p class="career-desc">Kirimkan CV dan surat lamaran ke <strong>hr@nylanfarma.id</strong> dengan subjek posisi yang dilamar. Cantumkan pengalaman, kualifikasi, dan kontak yang dapat dihubungi.</p>
+    </div>
+  </section>
+
+  <footer class="footer-gold">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image/logo-img.png" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Lokasi Perusahaan</h4><p>Kawasan Industri Gandus, Blok C-12<br/>Palembang, Sumatera Selatan</p></div>
+        <div class="footer-col"><h4>Email Resmi</h4><p>info@nylanfarma.id</p></div>
+        <div class="footer-col"><h4>Jam Operasional</h4><p>Senin–Jumat: 08.00 – 17.00</p></div>
+      </div>
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/products.js"></script>
+  <script src="./js/cart.js"></script>
+  <script src="./js/script.js"></script>
+  <script>
+    // Ensure feather icons render after DOM is ready and navbar toggles are attached
+    document.addEventListener('DOMContentLoaded', function(){
+      if(window.feather && typeof feather.replace === 'function'){
+        feather.replace();
+      }
+
+      const hamburger = document.getElementById('hamburger-menu');
+      const navNav = document.querySelector('.navbar-nav');
+      if(hamburger) { hamburger.addEventListener('click', ()=> navNav.classList.toggle('active')); }
+      document.querySelectorAll('.navbar-nav > a').forEach(a=> a.addEventListener('click', ()=> navNav.classList.remove('active')));
+      document.querySelectorAll('.nav-item.dropdown > a').forEach(trigger=>{
+        trigger.addEventListener('click', (e)=>{ if(window.innerWidth<=768){ e.preventDefault(); trigger.parentElement.classList.toggle('active'); }});
+      });
+
+      // Make sure search and cart icons are visible (in case CSS hid them)
+      const searchTrigger = document.getElementById('search-trigger');
+      if(searchTrigger) searchTrigger.style.display = 'inline-flex';
+      const cartLink = document.querySelector('.navbar-extra a[href="menu.html#produk"]');
+      if(cartLink) cartLink.style.display = 'inline-flex';
+    });
+  </script>
+</body>
+</html>
