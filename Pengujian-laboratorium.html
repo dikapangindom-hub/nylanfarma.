@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pengujian Laboratorium — Nylan Farma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    /* lab page styles */
+    .lab-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 2rem 7%;
+      background: #fff;
+    }
+
+    .lab-hero-left h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .lab-hero-left p {
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .lab-hero-right img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Main content wrapper */
+    .lab-content {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2rem;
+      padding: 2rem 7%;
+      background: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .lab-left {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .lab-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lab-section h2 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .lab-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .lab-section li {
+      padding: 0.4rem 0;
+      color: #333;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .lab-section li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    /* Sidebar */
+    .lab-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .lab-card {
+      background: #fbfbfb;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #f1e1c5;
+    }
+
+    .lab-card h3 {
+      color: var(--primary);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .lab-card p {
+      color: #333;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .harga-item {
+      background: #fff6e8;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .btn-hubungi {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s ease;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .btn-hubungi:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .lab-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .lab-content {
+        grid-template-columns: 1fr;
+      }
+
+      .lab-left {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="./image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+
+      <div class="nav-item dropdown">
+        <a href="about.html" class="has-dropdown">Tentang Kami</a>
+        <div class="dropdown-menu">
+          <a href="nilai-inti.html">Nilai Inti Perusahaan</a>
+          <a href="kepengurusan.html">Kepengurusan</a>
+          <a href="berita.html">Berita</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="menu.html" class="has-dropdown">Produk</a>
+        <div class="dropdown-menu">
+          <a href="menu.html#produk">Semua Produk</a>
+          <a href="menu.html#obat-resep">Obat Resep Dokter</a>
+          <a href="menu.html#vitamin">Vitamin</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#" class="has-dropdown">Layanan</a>
+        <div class="dropdown-menu">
+          <a href="manufaktur-produk.html">Manufaktur Produk</a>
+          <a href="Pengujian-laboratorium.html">Pengujian Laboratorium</a>
+          <a href="Komplain-produk-jasa.html">Komplain Produk/Jasa</a>
+        </div>
+      </div>
+
+      <a href="karier.html">Karier</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#search" id="search-trigger"><i data-feather="search"></i></a>
+      <a href="menu.html#produk"><i data-feather="shopping-cart"></i></a>
+
+      <button id="hamburger-menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH IMAGE -->
+  <section class="lab-hero">
+    <div class="lab-hero-left">
+      <h1>Pengujian Laboratorium</h1>
+      <p>Pengujian analitik dan uji stabilitas produk untuk memastikan kualitas dan keamanan.</p>
+    </div>
+    <div class="lab-hero-right">
+      <img src="./image/Pengujian-laboratorium.png" alt="Pengujian Laboratorium" />
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="lab-content">
+    <div class="lab-left">
+      <!-- RUANG LINGKUP LAYANAN -->
+      <div class="lab-section">
+        <h2>Ruang Lingkup Layanan</h2>
+        <ul>
+          <li>Pengujian kimia (active content, pH, viskositas, kejenuhan, densitas)</li>
+          <li>Pengujian mikrobiologi dasar</li>
+          <li>Uji stabilitas (accelerated & real-time)</li>
+          <li>Pengujian fisik dan organolepik</li>
+        </ul>
+      </div>
+
+      <!-- OUTPUT (DELIVERABLES) -->
+      <div class="lab-section">
+        <h2>Output (Deliverables)</h2>
+        <ul>
+          <li>Hasil pengujian lengkap</li>
+          <li>Sertifikat analisis (CoA)</li>
+          <li>Laporan uji stabilitas</li>
+          <li>Dokumentasi dan rekomendasi</li>
+        </ul>
+      </div>
+
+      <!-- JAMINAN LAYANAN -->
+      <div class="lab-section">
+        <h2>Jaminan Layanan</h2>
+        <ul>
+          <li>Alat lab terkalibasi dengan sertifikat teruji valid.</li>
+          <li>Standar internasional (ISO/IEC 17025) dan BPOM compliance.</li>
+          <li>Hasil cepat dan akurat untuk mendukung keputusan bisnis Anda.</li>
+          <li>Ke hasil lab bisa dijadikan acuan untuk sertifikasi produk.</li>
+        </ul>
+      </div>
+
+      <!-- AJUKAN PERMINTAAN -->
+      <div class="lab-section">
+        <h2>Ajukan Permintaan</h2>
+        <p>Isi form singkat atau hubungi tim kami untuk estimasi dan jadwal pengujian.</p>
+        <a href="mailto:production@nylanpharma.co.id" class="btn-hubungi">Hubungi Produksi</a>
+      </div>
+    </div>
+
+    <!-- SIDEBAR KANAN -->
+    <div class="lab-sidebar">
+      <!-- ESTIMASI HARGA -->
+      <div class="lab-card">
+        <h3>Estimasi Harga</h3>
+        <p style="font-size: 0.85rem; margin-bottom: 0.6rem;">Harga tergantung jenis & kompleksitas pengujian:</p>
+        <div class="harga-item">
+          <strong>Uji kimia (HPLC/UV):</strong> Rp 500.000 - Rp 750.000 per parameter
+        </div>
+        <div class="harga-item">
+          <strong>Uji mikrobiologi:</strong> Rp 300.000 - Rp 500.000 per pengujian
+        </div>
+        <div class="harga-item">
+          <strong>Uji stabilitas (3-6 bulan):</strong> Rp 2.500.000 - Rp 5.000.000 per produk
+        </div>
+        <div class="harga-item">
+          <strong>CoA (Certificate of Analysis):</strong> Rp 250.000 - Rp 500.000 per sertifikat
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-gold" style="margin-top: 2rem;">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image/logo-img.png" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>Kawasan Industri Gandus, Blok C-12<br>Palembang, Sumatera Selatan</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br>production@nylanpharma.co.id</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin–Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>feather.replace();</script>
+</body>
+</html>

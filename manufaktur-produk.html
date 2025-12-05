@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manufaktur Produk — Nylan Farma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    /* manufaktur page styles */
+    .manufaktur-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 2rem 7%;
+      background: #fff;
+    }
+
+    .manufaktur-hero-left h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .manufaktur-hero-left p {
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .manufaktur-hero-right img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* Main content wrapper */
+    .manufaktur-content {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2rem;
+      padding: 2rem 7%;
+      background: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .manufaktur-left {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .manufaktur-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .manufaktur-section h2 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .manufaktur-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .manufaktur-section li {
+      padding: 0.4rem 0;
+      color: #333;
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .manufaktur-section li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+
+    /* Sidebar */
+    .manufaktur-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .manufaktur-card {
+      background: #fbfbfb;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #f1e1c5;
+    }
+
+    .manufaktur-card h3 {
+      color: var(--primary);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .manufaktur-card p {
+      color: #333;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .harga-item {
+      background: #fff6e8;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .btn-hubungi {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s ease;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .btn-hubungi:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .manufaktur-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .manufaktur-content {
+        grid-template-columns: 1fr;
+      }
+
+      .manufaktur-left {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="./image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+
+      <div class="nav-item dropdown">
+        <a href="about.html" class="has-dropdown">Tentang Kami</a>
+        <div class="dropdown-menu">
+          <a href="nilai-inti.html">Nilai Inti Perusahaan</a>
+          <a href="kepengurusan.html">Kepengurusan</a>
+          <a href="berita.html">Berita</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="menu.html" class="has-dropdown">Produk</a>
+        <div class="dropdown-menu">
+          <a href="menu.html#produk">Semua Produk</a>
+          <a href="menu.html#obat-resep">Obat Resep Dokter</a>
+          <a href="menu.html#vitamin">Vitamin</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#" class="has-dropdown">Layanan</a>
+        <div class="dropdown-menu">
+          <a href="manufaktur-produk.html">Manufaktur Produk</a>
+          <a href="lab.html">Pengujian Laboratorium</a>
+          <a href="Komplain-produk-jasa.html">Komplain Produk/Jasa</a>
+        </div>
+      </div>
+
+      <a href="karier.html">Karier</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#search" id="search-trigger"><i data-feather="search"></i></a>
+      <a href="menu.html#produk"><i data-feather="shopping-cart"></i></a>
+
+      <button id="hamburger-menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION WITH IMAGE -->
+  <section class="manufaktur-hero">
+    <div class="manufaktur-hero-left">
+      <h1>Manufaktur Produk</h1>
+      <p>Solusi manufaktur untuk skala pilot hingga komersial — produksi, pengemasan, dan jaminan mutu.</p>
+    </div>
+    <div class="manufaktur-hero-right">
+      <img src="./image/manufaktur-produk.png" alt="Manufaktur Produk" />
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="manufaktur-content">
+    <div class="manufaktur-left">
+      <!-- RUANG LINGKUP LAYANAN -->
+      <div class="manufaktur-section">
+        <h2>Ruang Lingkup Layanan</h2>
+        <ul>
+          <li>Produksi skala pilot dan komersial</li>
+          <li>IPC, pengendalian mutu, dan dokumentasi batch record</li>
+          <li>Pengemasan primer dan sekunder</li>
+          <li>Penyediaan Certificate of Analysis (CoA)</li>
+          <li>Layanan tersedia untuk: cair oral, suplemen cair, larutan kesehatan, dan tetes mata tertentu</li>
+        </ul>
+      </div>
+
+      <!-- KAPASITAS PRODUKSI -->
+      <div class="manufaktur-section">
+        <h2>Kapasitas Produksi</h2>
+        <ul>
+          <li><strong>Batch kecil:</strong> 20–100 L</li>
+          <li><strong>Batch menengah:</strong> 100–500 L</li>
+          <li><strong>Filling</strong> otomatis atau semi-otomatis untuk botol plastik/kaca</li>
+        </ul>
+      </div>
+
+      <!-- JAMINAN LAYANAN -->
+      <div class="manufaktur-section">
+        <h2>Jaminan Layanan</h2>
+        <ul>
+          <li>Proses mengikuti standar CPOB dengan validasi dan IPC ketat.</li>
+          <li>Bahan baku produk dijamin sesuai spesifikasi dan disertai CoA.</li>
+          <li>Mitra berhak melakukan audit fasilitas sebelum kontrak berjalan.</li>
+        </ul>
+      </div>
+
+      <!-- AJUKAN PERMINTAAN -->
+      <div class="manufaktur-section">
+        <h2>Ajukan Permintaan</h2>
+        <p>Isi form singkat atau hubungi tim kami untuk estimasi resmi dan konsultasi teknis.</p>
+        <a href="mailto:production@nylanpharma.co.id" class="btn-hubungi">Hubungi Produksi</a>
+      </div>
+    </div>
+
+    <!-- SIDEBAR KANAN -->
+    <div class="manufaktur-sidebar">
+      <!-- ESTIMASI HARGA -->
+      <div class="manufaktur-card">
+        <h3>Estimasi Harga</h3>
+        <p style="font-size: 0.85rem; margin-bottom: 0.6rem;">Harga tergantung volume, bentuk sediaan, dan kemasan. Estimasi dasar:</p>
+        <div class="harga-item">
+          <strong>Produksi cairan kesehatan:</strong> Rp 1.800 – Rp 3.500 per botol (60–100 ml)
+        </div>
+        <div class="harga-item">
+          <strong>Pengemasan sekunder:</strong> Rp 500 – Rp 1.200 per unit
+        </div>
+        <div class="harga-item">
+          <strong>Pembuatan pilot batch:</strong> Rp 7.000.000 – Rp 15.000.000 per batch
+        </div>
+        <div class="harga-item">
+          <strong>Penyimpanan produk:</strong> Rp 150.000 per pallet per bulan
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASILITAS PRODUKSI -->
+  <section class="fasilitas-produksi" style="padding: 3rem 7%; background: #f9f9f9;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 style="color: var(--primary); font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;">Fasilitas Produksi</h2>
+      <p style="color: #666; font-size: 1rem;">Temukan berbagai area produksi dan fasilitas modern kami</p>
+    </div>
+
+    <div class="fasilitas-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <div class="fasilitas-item" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="./image/areaproduksi.png" alt="Area Produksi" style="width: 100%; height: 200px; object-fit: cover;" />
+        <div style="padding: 1.2rem;">
+          <h3 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Area Produksi</h3>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">Fasilitas produksi modern dengan standar GMP untuk memastikan kualitas produk.</p>
+        </div>
+      </div>
+
+      <div class="fasilitas-item" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="./image/gudangpenyimpananbahanbaku.png" alt="Gudang Penyimpanan Bahan Baku" style="width: 100%; height: 200px; object-fit: cover;" />
+        <div style="padding: 1.2rem;">
+          <h3 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Gudang Penyimpanan Bahan Baku</h3>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">Penyimpanan bahan baku dengan kontrol suhu dan kelembaban yang ketat.</p>
+        </div>
+      </div>
+
+      <div class="fasilitas-item" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="./image/laboratoriumqualitycontrol(qc).png" alt="Laboratorium Quality Control (QC)" style="width: 100%; height: 200px; object-fit: cover;" />
+        <div style="padding: 1.2rem;">
+          <h3 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Laboratorium Quality Control (QC)</h3>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">Laboratorium modern untuk pengujian kualitas dan kontrol mutu produk.</p>
+        </div>
+      </div>
+
+      <div class="fasilitas-item" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <img src="./image/ruangproduksi.png" alt="Ruang Produksi" style="width: 100%; height: 200px; object-fit: cover;" />
+        <div style="padding: 1.2rem;">
+          <h3 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Ruang Produksi</h3>
+          <p style="color: #666; font-size: 0.9rem; line-height: 1.5;">Ruang produksi bersih dengan peralatan canggih untuk proses manufaktur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-gold" style="margin-top: 2rem;">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image/logo-img.png" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>Kawasan Industri Gandus, Blok C-12<br>Palembang, Sumatera Selatan</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br>production@nylanpharma.co.id</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin–Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>feather.replace();</script>
+</body>
+</html>

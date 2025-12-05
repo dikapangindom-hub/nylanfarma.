@@ -21,6 +21,30 @@
 
   <div class="top-strip"></div>
 
+  <!-- SEARCH BAR -->
+  <div class="search-bar" id="search-bar">
+    <div class="search-container">
+      <div class="search-input-group">
+        <input type="text" id="search-input" placeholder="Cari produk, layanan, atau informasi..." />
+        <button id="search-close"><i data-feather="x"></i></button>
+      </div>
+
+      <div class="search-recommendations">
+        <h4>Rekomendasi Pencarian:</h4>
+        <div class="search-suggestions">
+          <span class="search-suggestion" data-search="obat resep">Obat Resep</span>
+          <span class="search-suggestion" data-search="vitamin">Vitamin</span>
+          <span class="search-suggestion" data-search="produk">Semua Produk</span>
+          <span class="search-suggestion" data-search="manufaktur">Manufaktur</span>
+          <span class="search-suggestion" data-search="laboratorium">Laboratorium</span>
+          <span class="search-suggestion" data-search="berita">Berita</span>
+          <span class="search-suggestion" data-search="kontak">Kontak</span>
+          <span class="search-suggestion" data-search="karier">Karier</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="index.html" class="navbar-logo">
@@ -36,17 +60,35 @@
   <div class="dropdown-menu">
     <a href="nilai-inti.html">Nilai Inti Perusahaan</a>
     <a href="kepengurusan.html">Kepengurusan</a>
+    <a href="berita.html">Berita</a>
   </div>
 </div>
 
 
-      <a href="menu.html">Produk &amp; Layanan</a>
+      <div class="nav-item dropdown">
+        <a href="menu.html" class="has-dropdown">Produk</a>
+        <div class="dropdown-menu">
+          <a href="menu.html#produk">Semua Produk</a>
+          <a href="menu.html#obat-resep">Obat Resep Dokter</a>
+          <a href="menu.html#vitamin">Vitamin</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#" class="has-dropdown">Layanan</a>
+        <div class="dropdown-menu">
+          <a href="manufaktur.html">Manufaktur Produk</a>
+          <a href="lab.html">Pengujian Laboratorium</a>
+          <a href="Komplain-produk-jasa.html">Komplain Produk/Jasa</a>
+        </div>
+      </div>
+
       <a href="karier.html">Karier</a>
-      <a href="#contact">Kontak</a>
+      <a href="Kontak.html">Kontak</a>
     </div>
 
     <div class="navbar-extra">
-      <a href="#"><i data-feather="search"></i></a>
+      <a href="#" id="search-trigger"><i data-feather="search"></i></a>
       <a href="menu.html#produk"><i data-feather="shopping-cart"></i></a>
 
       <button id="hamburger-menu">
@@ -73,17 +115,12 @@
 
     <div class="hero-right">
       <div class="hero-produk-header">
-        <h3>Produk & Layanan</h3>
-        <p>Pilih kategori untuk melihat daftar produk secara lengkap.</p>
+        <h3>Berita</h3>
+        <p>Informasi terkini tentang kegiatan dan inisiatif Nylan Farma.</p>
       </div>
 
-      <div class="hero-cards">
-        <a href="menu.html#obat-bebas" class="hero-card">Obat Bebas</a>
-        <a href="menu.html#obat-bt" class="hero-card">Obat Bebas Terbatas</a>
-        <a href="menu.html#obat-keras" class="hero-card">Obat Keras</a>
-        <a href="menu.html#herbal" class="hero-card">Obat Herbal</a>
-        <a href="menu.html#suplemen" class="hero-card">Suplemen</a>
-        <a href="menu.html#lainnya" class="hero-card">Lainnya</a>
+      <div class="news-slideshow">
+        <img id="news-image" src="./image/Layanan-Pemeriksaan-Kesehatan-Gratis.png" alt="Berita" />
       </div>
 
       <div class="hero-produk-footer"></div>
@@ -120,7 +157,9 @@
     </div>
 
     <div class="career-frame">
-      <img src="./image/job.jpg" alt="Karier" class="career-img" />
+      <a href="karier.html">
+        <img src="./image/job.jpg" alt="Karier" class="career-img" />
+      </a>
     </div>
   </section>
 
@@ -231,6 +270,141 @@
         }
       });
     });
+
+    // News slideshow
+    const images = [
+      './image/Layanan-Pemeriksaan-Kesehatan-Gratis.png',
+      './image/Program-Donasi-Obat-dan-Bantuan-Medis.png',
+      './image/Penyuluhan-Kesehatan-Masyarakat.png',
+      './image/Program-Magang-Industri.png'
+    ];
+    let currentIndex = 0;
+    const newsImage = document.getElementById('news-image');
+
+    function changeImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      newsImage.src = images[currentIndex];
+    }
+
+    // Make image clickable to redirect to news tab
+    newsImage.style.cursor = 'pointer';
+    newsImage.addEventListener('click', () => {
+      window.location.href = 'berita.html';
+    });
+
+    setInterval(changeImage, 3000); // Change image every 3 seconds
+
+    // Search functionality
+    const searchTrigger = document.getElementById('search-trigger');
+    const searchBar = document.getElementById('search-bar');
+    const searchInput = document.getElementById('search-input');
+    const searchClose = document.getElementById('search-close');
+
+    // Show search bar
+    searchTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      searchBar.classList.add('active');
+      searchInput.focus();
+    });
+
+    // Hide search bar
+    searchClose.addEventListener('click', () => {
+      searchBar.classList.remove('active');
+      searchInput.value = '';
+    });
+
+    // Hide search bar when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchBar.contains(e.target) && !searchTrigger.contains(e.target)) {
+        searchBar.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+
+    // Handle search input
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        const query = searchInput.value.trim().toLowerCase();
+        if (query) {
+          performSearch(query);
+        }
+      }
+    });
+
+    // Handle clickable search suggestions
+    const searchSuggestions = document.querySelectorAll('.search-suggestion');
+    searchSuggestions.forEach(suggestion => {
+      suggestion.addEventListener('click', () => {
+        const searchTerm = suggestion.getAttribute('data-search');
+        searchInput.value = searchTerm;
+        performSearch(searchTerm);
+      });
+    });
+
+    // Search function
+    function performSearch(query) {
+      // Define searchable content and their corresponding pages
+      const searchData = {
+        // Products
+        'obat resep': 'menu.html#obat-resep',
+        'obat resep dokter': 'menu.html#obat-resep',
+        'vitamin': 'menu.html#vitamin',
+        'obat bebas': 'menu.html#obat-bebas',
+        'obat terbatas': 'menu.html#obat-bebas',
+        'obat injeksi': 'menu.html#injeksi',
+        'obat topikal': 'menu.html#topikal',
+        'produk': 'menu.html#produk',
+        'semua produk': 'menu.html#produk',
+
+        // Services
+        'manufaktur': 'manufaktur.html',
+        'manufaktur produk': 'manufaktur.html',
+        'laboratorium': 'lab.html',
+        'pengujian laboratorium': 'lab.html',
+        'komplain': 'Komplain-produk-jasa.html',
+        'komplain produk': 'Komplain-produk-jasa.html',
+        'layanan': '#',
+
+        // Company info
+        'tentang kami': 'about.html',
+        'nilai inti': 'nilai-inti.html',
+        'kepengurusan': 'kepengurusan.html',
+        'berita': 'berita.html',
+        'news': 'berita.html',
+
+        // Career
+        'karier': 'karier.html',
+        'karir': 'karier.html',
+        'kerja': 'karier.html',
+        'job': 'karier.html',
+
+        // Contact
+        'kontak': 'Kontak.html',
+        'contact': 'Kontak.html',
+        'hubungi': 'Kontak.html',
+
+        // Home
+        'home': 'index.html',
+        'beranda': 'index.html'
+      };
+
+      // Check for exact matches first
+      if (searchData[query]) {
+        window.location.href = searchData[query];
+        return;
+      }
+
+      // Check for partial matches
+      for (const [key, url] of Object.entries(searchData)) {
+        if (key.includes(query) || query.includes(key)) {
+          window.location.href = url;
+          return;
+        }
+      }
+
+      // If no match found, redirect to products page as default
+      window.location.href = 'menu.html#produk';
+    }
   </script>
 
 </body>

@@ -99,7 +99,7 @@ const produksData = [
     stok: 500,
     deskripsi: "Pereda demam dan nyeri",
     rating: 4.7,
-    image: "./image/Obat-bebas&terbatas/N-Cetamol.png",
+    image: "./image/Obat-bebas-terbatas/N-Cetamol.png",
     resep: false
   },
   {
@@ -110,7 +110,7 @@ const produksData = [
     stok: 350,
     deskripsi: "Obat demam dan sakit kepala",
     rating: 4.6,
-    image: "./image/Obat-bebas&terbatas/Acetynal.png",
+    image: "./image/Obat-bebas-terbatas/Acetynal.png",
     resep: false
   },
   {
@@ -121,7 +121,7 @@ const produksData = [
     stok: 280,
     deskripsi: "Penawar asam lambung",
     rating: 4.5,
-    image: "./image/Obat-bebas&terbatas/Maagrelief.png",
+    image: "./image/Obat-bebas-terbatas/Maagrelief.png",
     resep: false
   },
   {
@@ -132,7 +132,7 @@ const produksData = [
     stok: 450,
     deskripsi: "Obat mual dan muntah",
     rating: 4.3,
-    image: "./image/Obat-bebas&terbatas/Travomyl.png",
+    image: "./image/Obat-bebas-terbatas/Travomyl.png",
     resep: false
   },
   {
@@ -143,7 +143,7 @@ const produksData = [
     stok: 380,
     deskripsi: "Sirup pereda demam untuk anak",
     rating: 4.6,
-    image: "./image/Obat-bebas&terbatas/N-Cetamol Sirup.png",
+    image: "./image/Obat-bebas-terbatas/N-Cetamol Sirup.png",
     resep: false
   },
   {
@@ -154,7 +154,7 @@ const produksData = [
     stok: 220,
     deskripsi: "Obat batuk ekspektoran",
     rating: 4.5,
-    image: "./image/Obat-bebas&terbatas/Mucoril.png",
+    image: "./image/Obat-bebas-terbatas/Mucoril.png",
     resep: false
   },
   {
@@ -165,7 +165,7 @@ const produksData = [
     stok: 300,
     deskripsi: "Sirup batuk untuk anak-anak",
     rating: 4.4,
-    image: "./image/Obat-bebas&terbatas/Kidcough.png",
+    image: "./image/Obat-bebas-terbatas/Kidcough.png",
     resep: false
   },
   {
@@ -176,7 +176,7 @@ const produksData = [
     stok: 250,
     deskripsi: "Tetes pereda demam",
     rating: 4.5,
-    image: "./image/Obat-bebas&terbatas/N-Cetamol Drops.png",
+    image: "./image/Obat-bebas-terbatas/N-Cetamol Drops.png",
     resep: false
   },
   {
@@ -187,7 +187,7 @@ const produksData = [
     stok: 320,
     deskripsi: "Suplemen folat untuk kehamilan",
     rating: 4.7,
-    image: "./image/Obat-bebas&terbatas/Folate.png",
+    image: "./image/Obat-bebas-terbatas/Folate.png",
     resep: false
   },
   {
@@ -198,7 +198,7 @@ const produksData = [
     stok: 270,
     deskripsi: "Suplemen zat besi",
     rating: 4.6,
-    image: "./image/Obat-bebas&terbatas/Ferraplus.png",
+    image: "./image/Obat-bebas-terbatas/Ferraplus.png",
     resep: false
   },
   {
@@ -209,7 +209,7 @@ const produksData = [
     stok: 400,
     deskripsi: "Obat diare ringan",
     rating: 4.4,
-    image: "./image/Obat-bebas&terbatas/Noralit.png",
+    image: "./image/Obat-bebas-terbatas/Noralit.png",
     resep: false
   },
   {
@@ -220,7 +220,7 @@ const produksData = [
     stok: 200,
     deskripsi: "Obat pencahar",
     rating: 4.5,
-    image: "./image/Obat-bebas&terbatas/Bisacolyn.png",
+    image: "./image/Obat-bebas-terbatas/Bisacolyn.png",
     resep: false
   },
   {
@@ -231,7 +231,7 @@ const produksData = [
     stok: 180,
     deskripsi: "Obat diare dengan loperamid",
     rating: 4.5,
-    image: "./image/Obat-bebas&terbatas/Losperistine.png",
+    image: "./image/Obat-bebas-terbatas/Losperistine.png",
     resep: false
   },
   {
@@ -242,7 +242,7 @@ const produksData = [
     stok: 350,
     deskripsi: "Obat pencahar ringan",
     rating: 4.3,
-    image: "./image/Obat-bebas&terbatas/Flunolax.png",
+    image: "./image/Obat-bebas-terbatas/Flunolax.png",
     resep: false
   },
 

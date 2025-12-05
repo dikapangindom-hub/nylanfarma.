@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berita — Nylan Farma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style>
+    /* Berita page styles */
+    .berita-hero {
+      padding: 2rem 7%;
+      background: #fff;
+      text-align: center;
+    }
+
+    .berita-hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .berita-hero p {
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .berita-content {
+      padding: 2rem 7%;
+      background: #fff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .berita-section {
+      margin-bottom: 3rem;
+    }
+
+    .berita-section h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+
+    .berita-item {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+    }
+
+    .berita-item img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .berita-item-content h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .berita-item-content p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .berita-item {
+        flex-direction: column;
+      }
+
+      .berita-item img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-strip"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="./image/logo-img.png" alt="Logo Nylan" class="logo-img" />
+      <span class="brand-text">NylanFarma.</span>
+    </a>
+
+    <div class="navbar-nav">
+      <a href="index.html">Home</a>
+
+      <div class="nav-item dropdown">
+        <a href="about.html" class="has-dropdown">Tentang Kami</a>
+        <div class="dropdown-menu">
+          <a href="nilai-inti.html">Nilai Inti Perusahaan</a>
+          <a href="kepengurusan.html">Kepengurusan</a>
+          <a href="berita.html">Berita</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="menu.html" class="has-dropdown">Produk</a>
+        <div class="dropdown-menu">
+          <a href="menu.html#produk">Semua Produk</a>
+          <a href="menu.html#obat-resep">Obat Resep Dokter</a>
+          <a href="menu.html#vitamin">Vitamin</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown">
+        <a href="#" class="has-dropdown">Layanan</a>
+        <div class="dropdown-menu">
+          <a href="manufaktur-produk.html">Manufaktur Produk</a>
+          <a href="Pengujian-laboratorium.html">Pengujian Laboratorium</a>
+          <a href="Komplain-produk-jasa.html">Komplain Produk/Jasa</a>
+        </div>
+      </div>
+
+      <a href="karier.html">Karier</a>
+      <a href="#contact">Kontak</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#search" id="search-trigger"><i data-feather="search"></i></a>
+      <a href="menu.html#produk"><i data-feather="shopping-cart"></i></a>
+
+      <button id="hamburger-menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="berita-hero">
+    <h1>Berita</h1>
+    <p>Informasi terkini tentang kegiatan dan inisiatif Nylan Farma dalam berkontribusi kepada masyarakat, pendidikan, dan lingkungan.</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <div class="berita-content">
+    <!-- KEGIATAN PENGABDIAN MASYARAKAT -->
+    <div class="berita-section">
+      <h2>Kegiatan Pengabdian Masyarakat</h2>
+
+      <div class="berita-item">
+        <img src="./image/Layanan-Pemeriksaan-Kesehatan-Gratis.png" alt="Layanan Pemeriksaan Kesehatan Gratis" />
+        <div class="berita-item-content">
+          <h3>a. Layanan Pemeriksaan Kesehatan Gratis</h3>
+          <p>Nylan Pharma menyelenggarakan pemeriksaan kesehatan rutin bagi masyarakat sekitar pabrik, meliputi pengecekan tekanan darah, gula darah, pemeriksaan mata sederhana, serta konsultasi penggunaan obat. Kegiatan ini bertujuan meningkatkan kesadaran masyarakat terhadap kesehatan dasar dan deteksi dini penyakit umum.</p>
+        </div>
+      </div>
+
+      <div class="berita-item">
+        <img src="./image/Program-Donasi-Obat-dan-Bantuan-Medis.png" alt="Program Donasi Obat dan Bantuan Medis" />
+        <div class="berita-item-content">
+          <h3>b. Program Donasi Obat dan Bantuan Medis</h3>
+          <p>Perusahaan menyediakan bantuan obat-obatan esensial dan alat kesehatan kepada puskesmas, posyandu, serta lembaga sosial yang membutuhkan. Dalam kondisi darurat, seperti bencana banjir, Nylan Pharma juga memberikan dukungan logistik medis melalui jalur distribusi resmi sesuai regulasi BPOM.</p>
+        </div>
+      </div>
+
+      <div class="berita-item">
+        <img src="./image/Penyuluhan-Kesehatan-Masyarakat.png" alt="Penyuluhan Kesehatan Masyarakat" />
+        <div class="berita-item-content">
+          <h3>c. Penyuluhan Kesehatan Masyarakat</h3>
+          <p>Melalui tim edukasi kesehatan, Nylan Pharma secara berkala memberikan sosialisasi tentang penggunaan obat yang aman, pencegahan penyakit menular, kebersihan lingkungan, serta penanganan gejala penyakit ringan. Program ini difokuskan pada wilayah dengan akses informasi kesehatan yang rendah.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEGIATAN PENDIDIKAN -->
+    <div class="berita-section">
+      <h2>Kegiatan Pendidikan</h2>
+
+      <div class="berita-item">
+        <img src="./image/Program-Magang-Industri.png" alt="Program Magang Industri" />
+        <div class="berita-item-content">
+          <h3>a. Program Magang Industri</h3>
+          <p>Perusahaan menerima siswa dan mahasiswa dari jurusan Farmasi, Kimia, Biologi, serta Teknik untuk mengikuti program magang di departemen Produksi, QA, QC, R&D, dan Engineering. Peserta mendapatkan pelatihan langsung terkait proses produksi, manajemen mutu, dan penerapan CPOB.</p>
+        </div>
+      </div>
+
+      <div class="berita-item">
+        <img src="./image/Seminar-dan-Workshop-Akademik.png" alt="Seminar dan Workshop Akademik" />
+        <div class="berita-item-content">
+          <h3>b. Seminar dan Workshop Akademik</h3>
+          <p>Nylan Pharma bekerja sama dengan universitas di Sumatera dan Jawa untuk mengadakan seminar, kuliah tamu, dan workshop tentang formulasi obat, riset stabilitas, regulatori BPOM, dan inovasi bioteknologi. Kegiatan ini membantu meningkatkan literasi ilmiah dan kompetensi akademik mahasiswa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KEGIATAN PEMBERDAYAAN LINGKUNGAN -->
+    <div class="berita-section">
+      <h2>Kegiatan Pemberdayaan Lingkungan</h2>
+
+      <div class="berita-item">
+        <img src="./image/Program-Pengelolaan-Limbah-Terpadu.png" alt="Program Pengelolaan Limbah Terpadu" />
+        <div class="berita-item-content">
+          <h3>a. Program Pengelolaan Limbah Terpadu</h3>
+          <p>Nylan Pharma melaksanakan pelatihan pemilahan limbah bagi masyarakat serta menyediakan fasilitas drop-box limbah B3 kecil seperti baterai dan obat kedaluwarsa. Program ini mendorong masyarakat memahami cara membuang limbah medis secara aman.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-gold" style="margin-top: 2rem;">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./image/logo-img.png" class="footer-logo" />
+        <p class="footer-brand-name">NylanFarma.</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Lokasi Perusahaan</h4>
+          <p>Kawasan Industri Gandus, Blok C-12<br>Palembang, Sumatera Selatan</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Email Resmi</h4>
+          <p>info@nylanfarma.id<br>production@nylanpharma.co.id</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Jam Operasional</h4>
+          <p>Senin–Jumat: 08.00 – 17.00<br>Sabtu: 08.00 – 13.00</p>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2024 Nylan Farma. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>feather.replace();</script>
+</body>
+</html>
